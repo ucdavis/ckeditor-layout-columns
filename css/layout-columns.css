@@ -1,0 +1,175 @@
+layout-columns {
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "first";
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f2f2f2;
+}
+
+/* Initially hide columns */
+layout-columns > div {
+  display: none;
+  background-color: #fff;
+}
+
+layout-columns > div:first-child {
+  display: block;
+}
+
+layout-columns[columns="2"] > div:nth-child(2) {
+  display: block;
+}
+
+layout-columns[columns="3"] > div:nth-child(2),
+layout-columns[columns="3"] > div:nth-child(3) {
+  display: block;
+}
+
+layout-columns[columns="4"] > div:nth-child(2),
+layout-columns[columns="4"] > div:nth-child(3),
+layout-columns[columns="4"] > div:nth-child(4) {
+  display: block;
+}
+
+/* Grid Areas */
+layout-columns > :nth-child(1) {
+  grid-area: first;
+  min-width: 0;
+}
+
+layout-columns > :nth-child(2) {
+  grid-area: second;
+  min-width: 0;
+}
+
+layout-columns > :nth-child(3) {
+  grid-area: third;
+  min-width: 0;
+}
+
+layout-columns > :nth-child(4) {
+  grid-area: fourth;
+  min-width: 0;
+}
+
+/* Two Column Layouts */
+layout-columns[columns="2"] {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "first second";
+}
+
+layout-columns[layout="33-67"] {
+  grid-template-columns: 1fr 2fr;
+}
+
+layout-columns[layout="67-33"] {
+  grid-template-columns: 2fr 1fr;
+}
+
+layout-columns[layout="25-75"] {
+  grid-template-columns: 1fr 3fr;
+}
+
+layout-columns[layout="75-25"] {
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Three Column Layouts */
+layout-columns[columns="3"] {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "first second third";
+}
+
+layout-columns[layout="25-50-25"] {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+layout-columns[layout="25-25-50"] {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+layout-columns[layout="50-25-25"] {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* Four Column Layouts */
+layout-columns[columns="4"] {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "first second third fourth";
+}
+
+/* Gap */
+layout-columns[gap="0"] {
+  grid-column-gap: 0;
+}
+
+layout-columns[gap="1"] {
+  grid-column-gap: .25rem;
+}
+
+layout-columns[gap="2"] {
+  grid-column-gap: .5rem;
+}
+/* 3 is already the default */
+layout-columns[gap="4"] {
+  grid-column-gap: 1.5rem;
+}
+
+layout-columns[gap="5"] {
+  grid-column-gap: 2rem;
+}
+
+layout-columns[gap="6"] {
+  grid-column-gap: 4rem;
+}
+
+/* Container Width */
+layout-columns[cwidth="shrink"] {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+layout-columns[cwidth="overflow"],
+layout-columns[cwidth="full"] {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+/* Vertical Margin */
+layout-columns[vmargin="1"] {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+layout-columns[vmargin="2"] {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+layout-columns[vmargin="3"] {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+layout-columns[vmargin="4"] {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+layout-columns[vmargin="5"] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+layout-columns[vmargin="6"] {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Remove the bottom margin from the last element in each column */
+layout-columns > div > :last-child {
+  margin-bottom: 0;
+}

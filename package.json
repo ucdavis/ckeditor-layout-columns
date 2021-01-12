@@ -1,0 +1,26 @@
+{
+	"name": "ckeditor-layout-columns",
+	"version": "1.0.0",
+	"description": "Layout Columns plugin for CKEditor 4 - JavaScript WYSIWYG web text editor.",
+	"author": {
+		"name": "Regents of the University of California",
+		"email": "copyright@ucdavis.edu",
+		"url": "https://www.ucdavis.edu"
+	},
+	"contributors": [
+		{
+			"name": "Mark Miller",
+			"email": "mrkmiller@ucdavis.edu"
+		}
+	],
+	"license": "MIT",
+	"bugs": "https://github.com/ucdavis/ckeditor-layout-columns/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ucdavis/ckeditor-layout-columns"
+	},
+	"keywords": [
+		"CKEditor",
+		"Widget"
+	]
+}
