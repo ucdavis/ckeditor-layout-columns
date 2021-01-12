@@ -173,3 +173,18 @@ layout-columns[vmargin="6"] {
 layout-columns > div > :last-child {
   margin-bottom: 0;
 }
+
+/* Warn when a column's editable div is missing https://github.com/ckeditor/ckeditor4/issues/1339 */
+layout-columns > [slot="column2"]:first-child:before,
+layout-columns > [slot="column3"]:first-child:before,
+layout-columns > [slot="column4"]:first-child:before,
+layout-columns [slot="column1"] + [slot="column3"]:before,
+layout-columns [slot="column1"] + [slot="column4"]:before,
+layout-columns [slot="column2"] + [slot="column4"]:before {
+  display: block;
+  padding: 1rem;
+  content: 'Woah! you lost a column! (probably by dragging something away). Try undoing what you just did.';
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  font-weight: bold;
+}
