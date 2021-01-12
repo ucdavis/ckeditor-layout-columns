@@ -12,11 +12,11 @@
     // Configure CKEditor DTD for custom drupal-entity element.
     // @see https://www.drupal.org/node/2448449#comment-9717735
     beforeInit: function (editor) {
-      var dtd = CKEDITOR.dtd;
+      const dtd = CKEDITOR.dtd;
 
       dtd['layout-columns'] = {'div': 1};
-      for (var tagName in dtd) {
-        if (dtd[tagName].p) {
+      for (let tagName in dtd) {
+        if (dtd[tagName].div) {
           dtd[tagName]['layout-columns'] = 1;
         }
       }
