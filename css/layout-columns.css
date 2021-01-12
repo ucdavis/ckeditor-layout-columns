@@ -180,7 +180,10 @@ layout-columns > [slot="column3"]:first-child:before,
 layout-columns > [slot="column4"]:first-child:before,
 layout-columns [slot="column1"] + [slot="column3"]:before,
 layout-columns [slot="column1"] + [slot="column4"]:before,
-layout-columns [slot="column2"] + [slot="column4"]:before {
+layout-columns [slot="column2"] + [slot="column4"]:before,
+layout-columns > [slot="column1"]:last-child:before,
+layout-columns > [slot="column2"]:last-child:before,
+layout-columns > [slot="column3"]:last-child:before {
   display: block;
   padding: 1rem;
   content: 'Woah! you lost a column! (probably by dragging something away). Try undoing what you just did.';
