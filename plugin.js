@@ -169,11 +169,7 @@
             this.element.removeAttribute('custom-class');
           }
         }
-
       });
-
     }
-
   });
-
 })(jQuery);
